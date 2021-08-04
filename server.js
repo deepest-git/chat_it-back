@@ -81,7 +81,7 @@ io.on('connection', (socket) => {
     socket.on('msg',(msgToUsr,cb)=>{
       Msg.create(msgToUsr)
       .then(res=>cb('tick'));
-      socket.emit('msg',msgToUsr);
+      io.emit('msg',msgToUsr);
     });
 
     socket.on('chkFrmTo',(frmTo,cb)=>{
