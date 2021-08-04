@@ -4,12 +4,10 @@ const UsersSchema = new mongoose.Schema({
 
    userEmail:{
        type:String,
-       required:true
    },
 
    pass:{
     type:String,
-    required:true
    },
 
    userName:{
