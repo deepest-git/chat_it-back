@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "https://chat-it-dg.herokuapp.com/",
     methods: ["GET", "POST"]}
   });
 var cors = require('cors');
@@ -59,7 +59,7 @@ io.on('connection', (socket) => {
       sendLog();
       console.log('dis.. '+socket.id)
     });     
-
+    true
     socket.on('log',(msg)=>{
       logger(socket.id,msg);
       sendLog();
