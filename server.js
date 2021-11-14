@@ -16,7 +16,7 @@ const Msg = require('./models/msg');
 
 connectDB();
 
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ origin: '*'}));
 // Init Middleware
 app.use(express.json({ extended: false }));
 // use Routes
