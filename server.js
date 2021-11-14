@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-it-dg.herokuapp.com/",
+    origin: "*",
     methods: ["GET", "POST"]}
   });
 var cors = require('cors');
